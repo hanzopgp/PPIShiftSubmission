@@ -1,0 +1,84 @@
+{
+  "color_scale": {
+    "chance_value": 0.5,
+    "metric": "AUROC",
+    "shared_across_panels": true
+  },
+  "figure": "measured_transfer_heatmaps",
+  "formula": "cell = mean AUROC over seeds 11, 22, 33 for one model/train-environment/surface",
+  "git_revision": "anonymous-review-source",
+  "inputs": [
+    {
+      "path": "paper/figures/iclr2027_final/figure_data__figure_measured_transfer_heatmaps.csv",
+      "sha256": "ccb2fd8c684df10aee6ff5b930714ccf20779f0147057c08ed7017b5a827c5be"
+    },
+    {
+      "path": "paper/figures/e003_final/figure_data__figure_05_measured_and_ood.csv",
+      "sha256": "d41968b14138125e555397b13d9218ef5af3c281f59520b5930b6ca27bf35451"
+    },
+    {
+      "path": "results/analysis/e003_result_registry.json",
+      "sha256": "5ec3312d88a0560d24d867dc7c1bd96400861822d3a78316dad75152702c30e6"
+    }
+  ],
+  "layout": {
+    "display_models": [
+      "Frozen-ESM2",
+      "TUnA",
+      "D-SCRIPT",
+      "RAPPPID"
+    ],
+    "display_training_environments": [
+      "Uniform",
+      "Degree",
+      "Sequence",
+      "ESM2",
+      "Bernett",
+      "TPPNI"
+    ],
+    "models": [
+      "symmetric_frozen_esm2_pair_mlp",
+      "tuna_corrected",
+      "dscript_esm2",
+      "rapppid"
+    ],
+    "surfaces": [
+      "vidal__measured",
+      "intact__measured"
+    ],
+    "training_environments": [
+      "uniform_partner",
+      "degree_partner_matched",
+      "sequence_nuisance_matched",
+      "esm_partner_matched",
+      "bernett2026_ilp_exact",
+      "tppni2025_scm_cl3_exact_balanced"
+    ]
+  },
+  "outputs": [
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_measured_transfer_heatmaps.pdf",
+      "sha256": "0e7a46f73026931d203f18706650b00e0df7d0b29647ff74d499aff98be397af"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_measured_transfer_heatmaps.png",
+      "sha256": "41c7713bf268b9de98b7e9100fad1cca40eb49b4048726164e6eaaa78e9953de"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_measured_transfer_heatmaps.svg",
+      "sha256": "98f69c688d1b0f999bda590adb31ec2d35cac3a18aa2c5db43c4f428e9326e25"
+    }
+  ],
+  "schema_version": "ppi_shift.iclr2027_figure_provenance.v1",
+  "scope_boundary": "Only Vidal/Y2H and IntAct measured-assay panels are shown. DataSAIL remains a separate supplementary analysis and RAPPPID is not imputed there.",
+  "script_sha256": "9b30d30c7fc83b94fdd5dcef679c8caaae224516a4afcd7ea60600b53370e66b",
+  "seed_aggregation": "arithmetic mean over exactly three frozen seeds: 11, 22, 33",
+  "source_data_csv": {
+    "path": "paper/figures/iclr2027_final/figure_data__figure_measured_transfer_heatmaps.csv",
+    "sha256": "ccb2fd8c684df10aee6ff5b930714ccf20779f0147057c08ed7017b5a827c5be"
+  },
+  "style_sha256": "f962d356603d7315d1f7d30bb523c83bb3cbd5a41de0262cfd05f80cdfa378ec"
+}

@@ -1,0 +1,73 @@
+panel,series,environment,auroc,model
+A,Easy properties,uniform_partner,0.5778863320534413,
+A,Protein-only: Empirical protein propensity,uniform_partner,0.5,
+A,Protein-only: Single-protein sequence propensity,uniform_partner,0.5562298639390179,
+C,Simple pooled-ESM classifier,uniform_partner,0.6243627394510587,
+A,Easy properties,degree_partner_matched,0.6100368590868636,
+A,Protein-only: Empirical protein propensity,degree_partner_matched,0.5,
+A,Protein-only: Single-protein sequence propensity,degree_partner_matched,0.5308010565464908,
+C,Simple pooled-ESM classifier,degree_partner_matched,0.6132239333586098,
+A,Easy properties,sequence_nuisance_matched,0.5580593538515084,
+A,Protein-only: Empirical protein propensity,sequence_nuisance_matched,0.5,
+A,Protein-only: Single-protein sequence propensity,sequence_nuisance_matched,0.5487439632716545,
+C,Simple pooled-ESM classifier,sequence_nuisance_matched,0.5402859140799513,
+A,Easy properties,esm_partner_matched,0.5393140590048817,
+A,Protein-only: Empirical protein propensity,esm_partner_matched,0.5,
+A,Protein-only: Single-protein sequence propensity,esm_partner_matched,0.5477427632695535,
+C,Simple pooled-ESM classifier,esm_partner_matched,0.5343936972730963,
+A,Easy properties,bernett2026_ilp_exact,0.5135216777480773,
+A,Protein-only: Empirical protein propensity,bernett2026_ilp_exact,0.5,
+A,Protein-only: Single-protein sequence propensity,bernett2026_ilp_exact,0.5379864162528405,
+C,Simple pooled-ESM classifier,bernett2026_ilp_exact,0.5549578982951977,
+A,Easy properties,tppni2025_scm_cl3_exact_balanced,0.5401442661171706,
+A,Protein-only: Empirical protein propensity,tppni2025_scm_cl3_exact_balanced,0.5,
+A,Protein-only: Single-protein sequence propensity,tppni2025_scm_cl3_exact_balanced,0.6483755367346106,
+C,Simple pooled-ESM classifier,tppni2025_scm_cl3_exact_balanced,0.6693717831173961,
+B,Original pairs,uniform_partner,0.5358301415046399,dscript_esm2
+B,Partners shuffled,uniform_partner,0.5352356222494884,dscript_esm2
+B,Original pairs,degree_partner_matched,0.5341857308620734,dscript_esm2
+B,Partners shuffled,degree_partner_matched,0.5338339911547586,dscript_esm2
+B,Original pairs,sequence_nuisance_matched,0.5285574469480482,dscript_esm2
+B,Partners shuffled,sequence_nuisance_matched,0.5361182671161089,dscript_esm2
+B,Original pairs,esm_partner_matched,0.5222756248812286,dscript_esm2
+B,Partners shuffled,esm_partner_matched,0.5338989045787628,dscript_esm2
+B,Original pairs,bernett2026_ilp_exact,0.5285815915736125,dscript_esm2
+B,Partners shuffled,bernett2026_ilp_exact,0.5329488315909191,dscript_esm2
+B,Original pairs,tppni2025_scm_cl3_exact_balanced,0.5720967621710685,dscript_esm2
+B,Partners shuffled,tppni2025_scm_cl3_exact_balanced,0.5702978526613799,dscript_esm2
+B,Original pairs,uniform_partner,0.511721738720532,rapppid
+B,Partners shuffled,uniform_partner,0.5060190953048335,rapppid
+B,Original pairs,degree_partner_matched,0.5142258524744505,rapppid
+B,Partners shuffled,degree_partner_matched,0.5083652333612011,rapppid
+B,Original pairs,sequence_nuisance_matched,0.5110392727190672,rapppid
+B,Partners shuffled,sequence_nuisance_matched,0.5067655606901679,rapppid
+B,Original pairs,esm_partner_matched,0.5049541206249245,rapppid
+B,Partners shuffled,esm_partner_matched,0.5027349178544035,rapppid
+B,Original pairs,bernett2026_ilp_exact,0.5180223619190734,rapppid
+B,Partners shuffled,bernett2026_ilp_exact,0.5125662308346147,rapppid
+B,Original pairs,tppni2025_scm_cl3_exact_balanced,0.5199428898485701,rapppid
+B,Partners shuffled,tppni2025_scm_cl3_exact_balanced,0.5148314344953806,rapppid
+B,Original pairs,uniform_partner,0.6309771082843534,symmetric_frozen_esm2_pair_mlp
+B,Partners shuffled,uniform_partner,0.6276563072781389,symmetric_frozen_esm2_pair_mlp
+B,Original pairs,degree_partner_matched,0.6332706504498384,symmetric_frozen_esm2_pair_mlp
+B,Partners shuffled,degree_partner_matched,0.6276818398100668,symmetric_frozen_esm2_pair_mlp
+B,Original pairs,sequence_nuisance_matched,0.5784723722549545,symmetric_frozen_esm2_pair_mlp
+B,Partners shuffled,sequence_nuisance_matched,0.6256584231321521,symmetric_frozen_esm2_pair_mlp
+B,Original pairs,esm_partner_matched,0.5290918392628492,symmetric_frozen_esm2_pair_mlp
+B,Partners shuffled,esm_partner_matched,0.6154030618272972,symmetric_frozen_esm2_pair_mlp
+B,Original pairs,bernett2026_ilp_exact,0.5936955237581969,symmetric_frozen_esm2_pair_mlp
+B,Partners shuffled,bernett2026_ilp_exact,0.6225503418717148,symmetric_frozen_esm2_pair_mlp
+B,Original pairs,tppni2025_scm_cl3_exact_balanced,0.6629621394392484,symmetric_frozen_esm2_pair_mlp
+B,Partners shuffled,tppni2025_scm_cl3_exact_balanced,0.6521140809818409,symmetric_frozen_esm2_pair_mlp
+B,Original pairs,uniform_partner,0.6353150539131139,tuna_corrected
+B,Partners shuffled,uniform_partner,0.6305499148899842,tuna_corrected
+B,Original pairs,degree_partner_matched,0.6333896772778499,tuna_corrected
+B,Partners shuffled,degree_partner_matched,0.6303407295776408,tuna_corrected
+B,Original pairs,sequence_nuisance_matched,0.5855206778381652,tuna_corrected
+B,Partners shuffled,sequence_nuisance_matched,0.6352275590243346,tuna_corrected
+B,Original pairs,esm_partner_matched,0.5336576074931659,tuna_corrected
+B,Partners shuffled,esm_partner_matched,0.6203070871295195,tuna_corrected
+B,Original pairs,bernett2026_ilp_exact,0.5970583920758724,tuna_corrected
+B,Partners shuffled,bernett2026_ilp_exact,0.6204628239178227,tuna_corrected
+B,Original pairs,tppni2025_scm_cl3_exact_balanced,0.6701850910839745,tuna_corrected
+B,Partners shuffled,tppni2025_scm_cl3_exact_balanced,0.6577032524555299,tuna_corrected

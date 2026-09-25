@@ -1,0 +1,12 @@
+block,model,surface,auroc,row_count
+measured,dscript_esm2,vidal__measured,0.506593818954508,18
+measured,dscript_esm2,intact__measured,0.5219196043502806,18
+measured,rapppid,vidal__measured,0.5095055419270211,18
+measured,rapppid,intact__measured,0.5249338859376551,18
+measured,symmetric_frozen_esm2_pair_mlp,vidal__measured,0.5606014121718275,18
+measured,symmetric_frozen_esm2_pair_mlp,intact__measured,0.5155076904365311,18
+measured,tuna_corrected,vidal__measured,0.5506388504362163,18
+measured,tuna_corrected,intact__measured,0.505134217809434,18
+strict_ood,dscript_esm2,official_datasail,0.5258123437029409,12
+strict_ood,symmetric_frozen_esm2_pair_mlp,official_datasail,0.5776297565948899,12
+strict_ood,tuna_corrected,official_datasail,0.5910450339963008,12

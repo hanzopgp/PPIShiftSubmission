@@ -1,0 +1,75 @@
+schema_version: ppi_shift.e003_signal_audit.v1
+experiment_id: E003
+status: frozen_before_new_signal_output
+protocol: audit/E003_SIGNAL_AUDIT_PROTOCOL.md
+
+inputs:
+  panel_manifest: /path/to/PPIShiftArtifacts/e003/method_fidelity_final_corrected/e003_panel_manifest.yaml
+  panel_root: /path/to/PPIShiftArtifacts/e003/method_fidelity_final_corrected/panels_and_samplers/panels
+  external_manifest: /path/to/PPIShiftArtifacts/e003/method_fidelity_final_corrected/e003_external_panel_manifest.json
+  representation:
+    model: facebook/esm2_t30_150M_UR50D
+    revision: a695f6045e2e32885fa60af20c13cb35398ce30c
+    layer: 30
+    pooling: overlap_corrected_residue_mean
+    dimension: 640
+    missing_policy: blocked_missing_feature
+
+environments:
+  - uniform_partner
+  - degree_partner_matched
+  - sequence_nuisance_matched
+  - esm_partner_matched
+  - bernett2026_ilp_exact
+  - tppni2025_scm_cl3_exact_balanced
+seeds: [11, 22, 33]
+
+split:
+  group_key: positive_row_id
+  fallback_group_key: canonical_positive_pair_key
+  method: sha256_group_hash
+  fit_fraction: 0.8
+  holdout_fraction: 0.2
+  test_panel_isolation: true
+
+classifiers:
+  logistic:
+    solver: lbfgs
+    C: 1.0
+    max_iter: 1000
+    class_weight: balanced
+    standardize: fit_partition_only
+    threshold_selection: training_fit_maximum_mcc
+  empirical_endpoint_propensity:
+    beta_alpha: 1.0
+    beta_beta: 1.0
+    pair_score: arithmetic_mean
+
+feature_sets:
+  easy_sequence_degree:
+    kind: pair_level_non_model
+    required_families: [sequence, degree]
+    optional_families: [annotation_nuisance]
+    forbidden: [core4_score, embedding, pair_interaction_score, test_derived_feature]
+  protein_only:
+    kind: single_endpoint_only
+    variants: [empirical_endpoint_propensity, single_protein_sequence_logistic]
+    forbidden: [partner_identity, pair_hash, endpoint_product, endpoint_difference, embedding, core4_score]
+  bernett_simple:
+    kind: esm2_symmetric_pair
+    pair_features: [sum, absolute_difference]
+    required_representation: exact_inputs_representation_gate
+    classifier: logistic
+
+broken_pairs:
+  algorithm: deterministic_stratified_cyclic_derangement
+  strata: [label]
+  sort_key: row_id
+  candidate_shifts: increasing_positive_integers
+  preserve: [row_count, label_counts, endpoint_marginals]
+  collision_policy: record_and_fail_audit_if_unreported
+
+outputs:
+  root: results/analysis/e003_signal_audit
+  status_values: [PASS, BLOCKED_MISSING_FEATURE, FAIL]
+  include_command_and_hashes: true

@@ -1,0 +1,26 @@
+{
+  "figure": "figure_negative_construction_characterization_main",
+  "formula": "cell = Jaccard(set_a, set_b); diagonal omitted; displayed as percent",
+  "git_revision": "anonymous-review-source",
+  "input_files": {
+    "results/analysis/e003_negative_representation/endpoint_set_overlap.csv": "a5ecf2a080ade43def3408c40b86a42c9f91fe82b3a4d3bab873b4a04e832fd4",
+    "results/analysis/e003_negative_representation/pair_overlap.csv": "8dcdc9aa405f3b234fc2e77a34f415a9d75afcc3e56379b6a3be6a400aaa74de"
+  },
+  "interpretation_boundary": {
+    "low_exact_pair_overlap_does_not_establish_distribution_separation": true,
+    "overlap_is_descriptive": true,
+    "protein_set_overlap_is_distinct_from_pair_overlap": true
+  },
+  "outputs": {
+    "pdf": "bab00e42f2401c1525825760405629b4a4095279d7338cae72bd875f56f1b9f1",
+    "png": "c5f1692126ac2d267a6eba522ab6dfb8601e7362380452075ca4e9af4e967440",
+    "svg": "be125543d56760fb6625b894d9a4dce2a612946b561dad05048e259dd700e785"
+  },
+  "schema_version": "ppi_shift.negative_construction_figure.v1",
+  "script_sha256": "91b5e776340c091ca643828c23c543473ca52053d0c4dbab3c29799953ebcef8",
+  "source_hashes": {
+    "base/endpoint_set_overlap.csv": "a5ecf2a080ade43def3408c40b86a42c9f91fe82b3a4d3bab873b4a04e832fd4",
+    "base/pair_overlap.csv": "8dcdc9aa405f3b234fc2e77a34f415a9d75afcc3e56379b6a3be6a400aaa74de"
+  },
+  "style_sha256": "f962d356603d7315d1f7d30bb523c83bb3cbd5a41de0262cfd05f80cdfa378ec"
+}

@@ -1,0 +1,48 @@
+{
+  "figures": [
+    {
+      "kind": "metadata",
+      "path": "paper/figures/iclr2027_final/figure_pair_dependence_heatmap.metadata.json",
+      "sha256": "dc1408827b033fff3e4d7b20164240db9cfb8efbfdb7108774b8fb89bd1582a8"
+    },
+    {
+      "kind": "metadata",
+      "path": "paper/figures/iclr2027_final/figure_measured_transfer_heatmaps.metadata.json",
+      "sha256": "42ab3731863b992352669729e79330d2f0a374ff86ab92b740b646d0beb28019"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_pair_dependence_heatmap.pdf",
+      "sha256": "709cff4128296619b3e201e49190454a88952e75a213b222e0265d646fec30ed"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_pair_dependence_heatmap.png",
+      "sha256": "069b78a7f76a32eb7c7217b80d8bd1ecdca382e85caf0afe53a4bacad179cbe6"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_pair_dependence_heatmap.svg",
+      "sha256": "a27e71d108e4cc46fc17be6e5e42a508802f9efa55998d0526f474429f420117"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_measured_transfer_heatmaps.pdf",
+      "sha256": "0e7a46f73026931d203f18706650b00e0df7d0b29647ff74d499aff98be397af"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_measured_transfer_heatmaps.png",
+      "sha256": "41c7713bf268b9de98b7e9100fad1cca40eb49b4048726164e6eaaa78e9953de"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_measured_transfer_heatmaps.svg",
+      "sha256": "98f69c688d1b0f999bda590adb31ec2d35cac3a18aa2c5db43c4f428e9326e25"
+    }
+  ],
+  "git_revision": "anonymous-review-source",
+  "schema_version": "ppi_shift.iclr2027_final_figure_manifest.v1",
+  "script_sha256": "9b30d30c7fc83b94fdd5dcef679c8caaae224516a4afcd7ea60600b53370e66b",
+  "style_sha256": "f962d356603d7315d1f7d30bb523c83bb3cbd5a41de0262cfd05f80cdfa378ec"
+}

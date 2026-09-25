@@ -1,0 +1,118 @@
+{
+  "command": "scripts/build_e003_final_paper_figures.py --audit-dir results/analysis/e003_signal_audit --core-registry results/analysis/e003_result_registry.json --config configs/experiments/e003_method_fidelity_final.yaml --protocol audit/E003_SIGNAL_AUDIT_PROTOCOL.md --repo-root . --output-dir paper/figures/e003_final",
+  "config": {
+    "path": "configs\\experiments\\e003_method_fidelity_final.yaml",
+    "sha256": "78ceac6426cb1094713732c099de35924bc4174c93e7d1af7424b7c92bbd4852"
+  },
+  "dpi": 300,
+  "figures": [
+    {
+      "figure": "figure_01_negative_construction_explainer",
+      "files": [
+        "paper\\figures\\e003_final\\figure_01_negative_construction_explainer.png",
+        "paper\\figures\\e003_final\\figure_01_negative_construction_explainer.pdf",
+        "paper\\figures\\e003_final\\figure_01_negative_construction_explainer.svg"
+      ],
+      "metadata": "paper\\figures\\e003_final\\figure_01_negative_construction_explainer.metadata.json",
+      "source_csv": "paper\\figures\\e003_final\\figure_data__figure_01_negative_construction_explainer.csv"
+    },
+    {
+      "figure": "figure_02_negative_transfer",
+      "files": [
+        "paper\\figures\\e003_final\\figure_02_negative_transfer.png",
+        "paper\\figures\\e003_final\\figure_02_negative_transfer.pdf",
+        "paper\\figures\\e003_final\\figure_02_negative_transfer.svg"
+      ],
+      "metadata": "paper\\figures\\e003_final\\figure_02_negative_transfer.metadata.json",
+      "source_csv": "paper\\figures\\e003_final\\figure_data__figure_02_negative_transfer.csv"
+    },
+    {
+      "figure": "figure_02_absolute_reference",
+      "files": [
+        "paper\\figures\\e003_final\\figure_02_absolute_reference.png",
+        "paper\\figures\\e003_final\\figure_02_absolute_reference.pdf",
+        "paper\\figures\\e003_final\\figure_02_absolute_reference.svg"
+      ],
+      "metadata": "paper\\figures\\e003_final\\figure_02_absolute_reference.metadata.json",
+      "source_csv": "paper\\figures\\e003_final\\figure_data__figure_02_absolute_reference.csv"
+    },
+    {
+      "figure": "figure_02_external_transfer_supplement",
+      "files": [
+        "paper\\figures\\e003_final\\figure_02_external_transfer_supplement.png",
+        "paper\\figures\\e003_final\\figure_02_external_transfer_supplement.pdf",
+        "paper\\figures\\e003_final\\figure_02_external_transfer_supplement.svg"
+      ],
+      "metadata": "paper\\figures\\e003_final\\figure_02_external_transfer_supplement.metadata.json",
+      "source_csv": "paper\\figures\\e003_final\\figure_data__figure_02_negative_transfer.csv"
+    },
+    {
+      "figure": "figure_03_pair_dependence",
+      "files": [
+        "paper\\figures\\e003_final\\figure_03_pair_dependence.png",
+        "paper\\figures\\e003_final\\figure_03_pair_dependence.pdf",
+        "paper\\figures\\e003_final\\figure_03_pair_dependence.svg"
+      ],
+      "metadata": "paper\\figures\\e003_final\\figure_03_pair_dependence.metadata.json",
+      "source_csv": "paper\\figures\\e003_final\\figure_data__figure_03_pair_dependence.csv"
+    },
+    {
+      "figure": "figure_04_control_vs_transfer",
+      "files": [
+        "paper\\figures\\e003_final\\figure_04_control_vs_transfer.png",
+        "paper\\figures\\e003_final\\figure_04_control_vs_transfer.pdf",
+        "paper\\figures\\e003_final\\figure_04_control_vs_transfer.svg"
+      ],
+      "metadata": "paper\\figures\\e003_final\\figure_04_control_vs_transfer.metadata.json",
+      "source_csv": "paper\\figures\\e003_final\\figure_data__figure_04_control_vs_transfer.csv"
+    },
+    {
+      "figure": "figure_05_measured_and_ood",
+      "files": [
+        "paper\\figures\\e003_final\\figure_05_measured_and_ood.png",
+        "paper\\figures\\e003_final\\figure_05_measured_and_ood.pdf",
+        "paper\\figures\\e003_final\\figure_05_measured_and_ood.svg"
+      ],
+      "metadata": "paper\\figures\\e003_final\\figure_05_measured_and_ood.metadata.json",
+      "source_csv": "paper\\figures\\e003_final\\figure_data__figure_05_measured_and_ood.csv"
+    }
+  ],
+  "git_revision": "anonymous-review-source",
+  "protocol": {
+    "path": "audit\\E003_SIGNAL_AUDIT_PROTOCOL.md",
+    "sha256": "d95a80bff32230fdcda35fd29cd50bce68ec74269233fab3723f4efee6734747"
+  },
+  "schema_version": "ppi_shift.e003_final_figure_manifest.v2",
+  "scientific_values_source": "canonical_machine_readable_registry_and_signal_audit_outputs",
+  "source_files": [
+    {
+      "path": "configs\\experiments\\e003_method_fidelity_final.yaml",
+      "sha256": "78ceac6426cb1094713732c099de35924bc4174c93e7d1af7424b7c92bbd4852"
+    },
+    {
+      "path": "audit\\E003_SIGNAL_AUDIT_PROTOCOL.md",
+      "sha256": "d95a80bff32230fdcda35fd29cd50bce68ec74269233fab3723f4efee6734747"
+    },
+    {
+      "path": "results\\analysis\\e003_result_registry.json",
+      "sha256": "5ec3312d88a0560d24d867dc7c1bd96400861822d3a78316dad75152702c30e6"
+    },
+    {
+      "path": "results\\analysis\\e003_signal_audit\\easy_feature_audit.csv",
+      "sha256": "7b2915dc8050f0ed2f4e7b82be25fbd45d628c21557163332d5a7e30e6576468"
+    },
+    {
+      "path": "results\\analysis\\e003_signal_audit\\protein_only_baseline.csv",
+      "sha256": "a5b30af13fe971584dae5c832e740dbc9edcdcf3481adedf8eae9a8006fd96c6"
+    },
+    {
+      "path": "results\\analysis\\e003_signal_audit\\bernett_simple_baseline.csv",
+      "sha256": "977dc4b234ee9f98f5958b0277b0926c426dd70827a904afbc241c9e05624c6a"
+    },
+    {
+      "path": "results\\analysis\\e003_signal_audit\\e003_broken_pair_results.csv",
+      "sha256": "e8820e87f977ba2db636601d1a2b25842bad528eb610c9a4f13e1472bbb0666d"
+    }
+  ],
+  "style_sha256": "f962d356603d7315d1f7d30bb523c83bb3cbd5a41de0262cfd05f80cdfa378ec"
+}

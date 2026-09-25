@@ -1,0 +1,10 @@
+section,construction,label,description
+construction,uniform_partner,Uniform,random legal partner
+construction,degree_partner_matched,Matched by degree,similar network degree
+construction,sequence_nuisance_matched,Matched by sequence,similar length/composition
+construction,esm_partner_matched,Matched in ESM2 space,similar frozen ESM2 representation
+construction,bernett2026_ilp_exact,Bernett 2026,global bias-reduced construction
+construction,tppni2025_scm_cl3_exact_balanced,TPPNI,topology-based construction
+evaluation,same_source,Same dataset,Gold -> Gold
+evaluation,cross_source,External datasets,Gold -> Vidal / IntAct / BioGRID / STRING
+evaluation,strict_ood,Strict OOD,Gold -> protein/family-unseen external subset

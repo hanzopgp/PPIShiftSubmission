@@ -1,0 +1,26 @@
+{
+  "figure": "figure_negative_construction_characterization_ecdf",
+  "formula": "ECDF over every row in each source table; no filtering or reweighting",
+  "git_revision": "anonymous-review-source",
+  "input_files": {
+    "results/analysis/e003_negative_representation/anchor_candidate_esm_distance.csv": "909e629ca76f36a01006b3bd8f768300551371f5ce83c6b152cd2d9dbaa4152e",
+    "results/analysis/e003_negative_representation/pair_esm_similarity.csv": "0124abfed25f10ca212f83c89a3ceefd01a9e58d0e85b3b3ae5ec79c68da1f93"
+  },
+  "interpretation_boundary": {
+    "esm2_matching_effect_is_expected_by_design": true,
+    "frozen_esm2_similarity_is_not_a_ppi_probability": true,
+    "selected_partner_distance_defined_only_for_anchor_fixed_constructions": true
+  },
+  "outputs": {
+    "pdf": "94bb114565f52e6eb3ad7f60de80996c90578724c2126625a86278b8e867a4ab",
+    "png": "6eb8a530ebb3fc0e3c262a5d6c7dccec92e750ef5a09f01decd24ff5e9087561",
+    "svg": "823d85d5bebe49a6fcae1165d5bb372191f9a5b66fc6abfa5c23cf51dce8df3a"
+  },
+  "schema_version": "ppi_shift.negative_construction_figure.v1",
+  "script_sha256": "91b5e776340c091ca643828c23c543473ca52053d0c4dbab3c29799953ebcef8",
+  "source_hashes": {
+    "base/anchor_candidate_esm_distance.csv": "909e629ca76f36a01006b3bd8f768300551371f5ce83c6b152cd2d9dbaa4152e",
+    "base/pair_esm_similarity.csv": "0124abfed25f10ca212f83c89a3ceefd01a9e58d0e85b3b3ae5ec79c68da1f93"
+  },
+  "style_sha256": "f962d356603d7315d1f7d30bb523c83bb3cbd5a41de0262cfd05f80cdfa378ec"
+}

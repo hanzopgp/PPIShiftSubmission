@@ -1,0 +1,68 @@
+{
+  "color_scale": "symmetric about zero",
+  "figure": "pair_dependence_heatmap",
+  "formula": "delta_auroc = auroc_original_pairs - auroc_partners_shuffled",
+  "git_revision": "anonymous-review-source",
+  "inputs": [
+    {
+      "path": "paper/figures/e003_final/figure_data__figure_03_pair_dependence.csv",
+      "sha256": "d15a8edf21939e3f23d5bfba438c28ec4eeff23f85b760745d5656add39e26ee"
+    }
+  ],
+  "interpretation_boundary": "This is a necessity diagnostic on the evaluated test constructions; it is not proof that a model never uses pair-specific information.",
+  "layout": {
+    "display_models": [
+      "Frozen-ESM2",
+      "TUnA",
+      "D-SCRIPT",
+      "RAPPPID"
+    ],
+    "display_test_environments": [
+      "Uniform",
+      "Degree",
+      "Sequence",
+      "ESM2",
+      "Bernett",
+      "TPPNI"
+    ],
+    "models": [
+      "symmetric_frozen_esm2_pair_mlp",
+      "tuna_corrected",
+      "dscript_esm2",
+      "rapppid"
+    ],
+    "test_environments": [
+      "uniform_partner",
+      "degree_partner_matched",
+      "sequence_nuisance_matched",
+      "esm_partner_matched",
+      "bernett2026_ilp_exact",
+      "tppni2025_scm_cl3_exact_balanced"
+    ]
+  },
+  "outputs": [
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_pair_dependence_heatmap.pdf",
+      "sha256": "709cff4128296619b3e201e49190454a88952e75a213b222e0265d646fec30ed"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_pair_dependence_heatmap.png",
+      "sha256": "069b78a7f76a32eb7c7217b80d8bd1ecdca382e85caf0afe53a4bacad179cbe6"
+    },
+    {
+      "kind": "rendered_figure",
+      "path": "paper/figures/iclr2027_final/figure_pair_dependence_heatmap.svg",
+      "sha256": "a27e71d108e4cc46fc17be6e5e42a508802f9efa55998d0526f474429f420117"
+    }
+  ],
+  "schema_version": "ppi_shift.iclr2027_figure_provenance.v1",
+  "script_sha256": "9b30d30c7fc83b94fdd5dcef679c8caaae224516a4afcd7ea60600b53370e66b",
+  "seed_aggregation": "input AUROC values are the frozen mean over seeds 11, 22, 33",
+  "source_data_csv": {
+    "path": "paper/figures/iclr2027_final/figure_data__figure_pair_dependence_heatmap.csv",
+    "sha256": "1161fda6d2ec883ffdd691c30aca96e7dd6d07eb986f0d0579fde10808c3b7b3"
+  },
+  "style_sha256": "f962d356603d7315d1f7d30bb523c83bb3cbd5a41de0262cfd05f80cdfa378ec"
+}

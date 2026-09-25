@@ -1,0 +1,46 @@
+{
+  "checkpoint_hashes": [],
+  "command": "scripts/build_e003_final_paper_figures.py --audit-dir results/analysis/e003_signal_audit --core-registry results/analysis/e003_result_registry.json --config configs/experiments/e003_method_fidelity_final.yaml --protocol audit/E003_SIGNAL_AUDIT_PROTOCOL.md --repo-root . --output-dir paper/figures/e003_final",
+  "config": {
+    "path": "configs\\experiments\\e003_method_fidelity_final.yaml",
+    "sha256": "78ceac6426cb1094713732c099de35924bc4174c93e7d1af7424b7c92bbd4852"
+  },
+  "figure": "figure_01_negative_construction_explainer",
+  "filters": {
+    "construction_count": 6,
+    "seed_values": [
+      11,
+      22,
+      33
+    ]
+  },
+  "formula": "schematic labels are taken from the frozen E003 construction contract",
+  "git_revision": "anonymous-review-source",
+  "input_files": [
+    {
+      "path": "configs\\experiments\\e003_method_fidelity_final.yaml",
+      "sha256": "78ceac6426cb1094713732c099de35924bc4174c93e7d1af7424b7c92bbd4852"
+    },
+    {
+      "path": "audit\\E003_SIGNAL_AUDIT_PROTOCOL.md",
+      "sha256": "d95a80bff32230fdcda35fd29cd50bce68ec74269233fab3723f4efee6734747"
+    }
+  ],
+  "panel_hashes": [],
+  "protocol": {
+    "path": "audit\\E003_SIGNAL_AUDIT_PROTOCOL.md",
+    "sha256": "d95a80bff32230fdcda35fd29cd50bce68ec74269233fab3723f4efee6734747"
+  },
+  "representation_source_revisions": [],
+  "schema_version": "ppi_shift.e003_figure_provenance.v1",
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "source_csv": {
+    "path": "paper\\figures\\e003_final\\figure_data__figure_01_negative_construction_explainer.csv",
+    "sha256": "709c0405e1f67e941599cb5bbabc7b8a3846088d9d5590f7d00f6818bf3c2e17"
+  },
+  "style_sha256": "f962d356603d7315d1f7d30bb523c83bb3cbd5a41de0262cfd05f80cdfa378ec"
+}

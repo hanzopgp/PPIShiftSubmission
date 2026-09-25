@@ -1,0 +1,25 @@
+panel,environment,x_easy_auroc,y_metric,y_definition,surface
+A,uniform_partner,0.5778863320534413,0.6270487091520368,deep-model same-source AUROC,
+B,uniform_partner,0.5778863320534413,0.5687434708963843,mean AUROC across other Gold test constructions,
+C,uniform_partner,0.5778863320534413,0.5693657814098544,vidal__measured transfer AUROC,vidal__measured
+C,uniform_partner,0.5778863320534413,0.5722285072139924,intact__measured transfer AUROC,intact__measured
+A,degree_partner_matched,0.6100368590868636,0.6091230258611985,deep-model same-source AUROC,
+B,degree_partner_matched,0.6100368590868636,0.572696968147024,mean AUROC across other Gold test constructions,
+C,degree_partner_matched,0.6100368590868636,0.5164454143177548,vidal__measured transfer AUROC,vidal__measured
+C,degree_partner_matched,0.6100368590868636,0.5138395134627108,intact__measured transfer AUROC,intact__measured
+A,sequence_nuisance_matched,0.5580593538515084,0.5602871607991763,deep-model same-source AUROC,
+B,sequence_nuisance_matched,0.5580593538515084,0.5490194987682353,mean AUROC across other Gold test constructions,
+C,sequence_nuisance_matched,0.5580593538515084,0.5245428358650243,vidal__measured transfer AUROC,vidal__measured
+C,sequence_nuisance_matched,0.5580593538515084,0.516191007220977,intact__measured transfer AUROC,intact__measured
+A,esm_partner_matched,0.5393140590048817,0.5392795175803551,deep-model same-source AUROC,
+B,esm_partner_matched,0.5393140590048817,0.5191378541625793,mean AUROC across other Gold test constructions,
+C,esm_partner_matched,0.5393140590048817,0.5027821384964243,vidal__measured transfer AUROC,vidal__measured
+C,esm_partner_matched,0.5393140590048817,0.4556874554032164,intact__measured transfer AUROC,intact__measured
+A,bernett2026_ilp_exact,0.5135216777480773,0.5610850823782041,deep-model same-source AUROC,
+B,bernett2026_ilp_exact,0.5135216777480773,0.5589903443223857,mean AUROC across other Gold test constructions,
+C,bernett2026_ilp_exact,0.5135216777480773,0.49700084616497997,vidal__measured transfer AUROC,vidal__measured
+C,bernett2026_ilp_exact,0.5135216777480773,0.5047312402948738,intact__measured transfer AUROC,intact__measured
+A,tppni2025_scm_cl3_exact_balanced,0.5401442661171706,0.6816003257097788,deep-model same-source AUROC,
+B,tppni2025_scm_cl3_exact_balanced,0.5401442661171706,0.5912359996209026,mean AUROC across other Gold test constructions,
+C,tppni2025_scm_cl3_exact_balanced,0.5401442661171706,0.5808724189803218,vidal__measured transfer AUROC,vidal__measured
+C,tppni2025_scm_cl3_exact_balanced,0.5401442661171706,0.5385653742050807,intact__measured transfer AUROC,intact__measured

@@ -1,0 +1,135 @@
+experiment_id: E003
+config_version: ppi_shift.e003_method_fidelity_final.v1
+design_status: implementation_pending_protocol_freeze
+purpose: >-
+  Method-faithful evaluation of negative-environment effects across four model
+  families, six balanced core environments, three seeds, and frozen external
+  transfer surfaces. Performance, robustness, and biological/generalization
+  validity remain separate estimands.
+
+parent:
+  experiment_id: E001v3
+  required_config: configs/experiments/e001_v3_common_cohort.yaml
+  required_manifest: data/manifests/e001_v3_common_cohort_manifest.yaml
+  old_e001_e002_artifacts_immutable: true
+
+compatibility:
+  max_raw_sequence_length: 512
+  filter_before_candidate_universe: true
+  native_cropping: false
+  positive_backbone: exact E001v3 retained positives
+  balanced_core_prevalence: 1:1
+  negative_semantic_class: synthetic_unobserved_pair
+  test_adaptation: forbidden
+  test_checkpoint_reselection: forbidden
+  test_threshold_selection: forbidden
+
+negative_environments:
+  core:
+    - uniform_partner
+    - degree_partner_matched
+    - sequence_nuisance_matched
+    - esm_partner_matched
+    - bernett2026_ilp_exact
+    - tppni2025_scm_cl3_exact_balanced
+  bernett2026_ilp_exact:
+    upstream_repository: https://github.com/bionetslab/ppi-splitting-pipeline
+    upstream_revision: 8bf9adb183b702c88db62ff878de482e2f20e4b2
+    candidate_cap: 4 * positive_rows
+    candidate_pool: global_legal_upper_triangle
+    lambda_degree: 1.0
+    lambda_taxon_pair: 1.0
+    lambda_self_loop: 1.0
+    lambda_go_bp_jaccard: 1.0
+    solver: scipy.optimize.milp/HiGHS
+    time_limit_seconds: 7200
+    mip_rel_gap: 0.01
+    failure_policy: no_silent_fallback
+  tppni2025_scm_cl3_exact:
+    upstream_repository: https://github.com/jbusto/UPNA-PPI
+    upstream_revision: 20d1d8225e9d377434669973b7391697be6b4aa2
+    configuration_model: p_ij=1/(exp(lambda_i+lambda_j)+1)
+    topology: complete_frozen_e003_positive_backbone_before_split
+    bottom_n: 10000000
+    l3_filter: exact_l3_count_equals_zero
+  tppni2025_scm_cl3_exact_balanced:
+    source_pool: tppni2025_scm_cl3_exact
+    selection: deterministic_without_replacement_from_sorted_l3_zero_pool
+    role: core_balanced_prevalence_sensitivity
+  tppni2025_scm_cl3_leakage_safe:
+    topology: stage_visible_positive_backbone
+    role: supplementary_leakage_safe_sensitivity
+
+models:
+  required:
+    - symmetric_frozen_esm2_pair_mlp
+    - dscript_esm2
+    - tuna_corrected
+    - rapppid
+  excluded_from_core:
+    senseppi:
+      status: optional_future_supplementary
+      reason: ESM2-3B cache and SENSE-PPI compute are outside the final Core-4 protocol
+      historical_source: https://gitlab.lcqb.upmc.fr/Konstvv/SENSE-PPI
+      historical_representation: facebook/esm2_t36_3B_UR50D
+  source_revisions:
+    dscript_esm2: 23cbb0fbbb454d09ee41ff749c1454d8b3c8a4b8
+    tuna_corrected: b5bda8fee261a4f27821738db995cf5883dcd133
+    esm2_t30_150m: a695f6045e2e32885fa60af20c13cb35398ce30c
+    rapppid: c3a28be56fb3bd96ccf8cc44ea9145cfcadeaf6c
+  fidelity:
+    rapppid:
+      tokenizer: SentencePiece_unigram_vocab_250_training_sequences_only
+      encoder: AWD_LSTM_bidirectional_two_layers_hidden_32_per_direction
+      embedding_dropout: 0.3
+      weight_dropconnect: 0.3
+      class_head: concat_128_to_32_mish_to_1_dropout_0.2
+      optimizer: Ranger21
+      averaged_weights: stochastic_weight_averaging
+      initialization: clean
+
+matrix:
+  models: 4
+  train_environments: 6
+  test_environments: 6
+  seeds: [11, 22, 33]
+  total_core_cells: 432
+  training_units: 72
+  validation_environment: matched_to_training_environment
+  checkpoint_selection: maximum_validation_auprc
+  threshold_selection: matched_validation_max_mcc
+  test_checkpoint_reuse_across_environments: true
+
+statistics:
+  primary_metric: auprc
+  secondary_metrics: [auroc, mcc, balanced_accuracy, f1, brier, nll, ece]
+  bootstrap_replicates: 2000
+  bootstrap_seed: 1729
+  global_pool_bootstrap: stratified_positive_negative
+  cluster_sensitivity: protein_endpoint_and_positive_backbone_cluster
+  seed_stability: separate_from_bootstrap
+  ranking_estimand: same_three_seed_environment_means
+  uncorrected_p_values: forbidden
+
+external_evaluation:
+  retraining_on_external_labels: false
+  checkpoint_or_threshold_selection_on_external_labels: false
+  vidal:
+    frozen_rows: 4031
+    semantics: 846_explicit_positive_and_3185_assay_non_detection
+    role: measured_transfer
+  intact:
+    positive_rows: 10111
+    negative_rows: 236
+    prevalence_normalized_ap_required: true
+    balanced_sensitivity_role: post_hoc_diagnostic_only
+  biogrid: exact_source_sampler_and_semantics_required
+  string: exact_source_sampler_and_semantics_required
+  datasail: official_2026_artifact_compact_36_cell_sensitivity
+
+freeze_gates:
+  protocol_freeze_before_corrected_test_score: true
+  sampler_and_panel_hashes_required: true
+  core_model_artifact_hashes_required: true
+  source_revision_hashes_required: true
+  no_main_merge: true
